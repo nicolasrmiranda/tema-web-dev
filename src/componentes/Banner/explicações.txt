@@ -1,0 +1,2 @@
+usa-se o "banner.js" e o "index.js" para fazer um redirecionamento.
+Ou seja, eu posso escolher o que eu quero importar através do "INDEX.JS".
