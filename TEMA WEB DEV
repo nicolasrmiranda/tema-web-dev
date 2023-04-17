@@ -1,0 +1,98 @@
+<!--tema desenvolvimento web. feito por nicolas ribeiro miranda-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <style>
+      /* Estilo CSS para a página */
+      body {
+        background-color: #cce6ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Estilo CSS para o formulário */
+      #cadastroForm {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type=text], input[type=tel] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      #resultado {
+       /* border: 1px solid green;*/
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <form id="cadastroForm" onsubmit="return cadastrarUsuario()">
+      <h1>Cadastro de Usuário</h1>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="matricula">Matrícula:</label>
+      <input type="text" id="matricula" name="matricula" required>
+
+      <input type="submit" value="Cadastrar">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+      function cadastrarUsuario() {
+        // Obtem os valores do formulário
+        var nome = document.getElementById("nome").value;
+        var endereco = document.getElementById("endereco").value;
+        var telefone = document.getElementById("telefone").value;
+        var matricula = document.getElementById("matricula").value;
+
+        // Exibe os resultados inseridos pelo usuário
+        var resultadoDiv = document.getElementById("resultado");
+        resultadoDiv.innerHTML = "<h2>Resultado:</h2><p>Nome: " + nome + "</p><p>Endereço: " + endereco + "</p><p>Telefone: " + telefone + "</p><p>Matrícula: " + matricula + "</p>";
+
+        // Limpa os valores do formulário
+        document.getElementById("nome").value = "";
+        document.getElementById("endereco").value = "";
+        document.getElementById("telefone").value = "";
+        document.getElementById("matricula").value = "";
+
+        return false; // Previne que a página recarregue após a submissão do formulário
+      }
+    </script>
+  </body>
+</html>
