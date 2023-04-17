@@ -1,3 +1,1 @@
-Primeiro projeto utilizando react.
-
-Realizado através do curso "React: Desenvolvendo com React" disponibilizado na plataforma Alura.
+AE SOR O ARQUIVO É  O "TEMA-WEB-DEV", NAO PROGRAMO A UM TEMPO DEVIDO A PROJETOS EXTRACURRICULARES E ESQUECI COMO USA O GITHUB E NAO CONSEGUI SUBIR UM REP NOVO
